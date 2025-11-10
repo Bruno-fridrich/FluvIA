@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+:root {
+  --font-principal: 'Poppins', sans-serif;
+  --cor-principal: #02618D;
+  --cor-fundo: #02618D;
+  --JetBrains-Mono: 'JetBrains Mono';
+  --League-Spartan: 'League Spartan';
+}
+
+body {
+  font-family: var(--font-principal);
+  background-color: var(--cor-fundo);
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box{
+    width: 300px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid var(--cor-principal);
+  border-radius: 15px;
+  background-color: #99B5C3;
+  width: auto;
+  font-size: 1rem;
+}
+
+button {
+  background-color: white;
+  color: #02618D;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 120%;
+  margin: 10%;
+}
+
+button:hover {
+  background-color: #dcecec;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 45%;
+  max-width: 300px;
+  height: auto;
+}
+
+#logo {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+#campos {
+  padding: 2em;
+}
+
+#nomeLogo {
+  font-family: var(--JetBrains-Mono);
+  color: #1C3342;
+  font-size: 185%;
+  margin: 0;
+}
+
+#loginTitulo {
+  font-family: var(--League-Spartan);
+  font-size: 200%;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 60%;
+  margin: 3%;
+  margin-top: -10px;
+}
+
+.login-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+:root {
+  --JetBrains-Mono: 'JetBrains Mono';
+  --League-Spartan: 'League Spartan';
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,37 +13,33 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 45%;
+  max-width: 300px;
+  height: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#logo {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+#campos {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+h1 {
+  margin: 0;
+}
+
+#nomeLogo {
+  font-family: var(--JetBrains-Mono);
+  color: #1C3342;
+  font-size: 50%;
+}
+
+#loginTitulo {
+  font-family: var(--League-Spartan);
+  font-size: 150%;
 }
