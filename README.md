@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# 🌱 FluvIA — Interface Web (Protótipo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 💧 Sobre o Projeto
+**FluvIA** é um protótipo de interface web inspirada em um aplicativo de **irrigação inteligente**.  
+O sistema permite **monitorar plantas, visualizar gráficos de consumo de água e gerenciar dados locais** de forma simples e visual.  
+Ele simula um app mobile utilizando **React + TypeScript**, com foco em uma **experiência fluida e responsiva**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧠 Principais Funcionalidades
+- 🔐 **Login com persistência** via `localStorage`  
+- 🏠 **Tela Home** com carrossel horizontal de plantas e gráfico (Recharts)  
+- 🌿 **Plantas:** listagem, busca e adição dinâmica via modal  
+- 📊 **Detalhes da planta** (`/plantas/:id`) com imagem, dados e gráfico individual  
+- 👤 **Usuário:** editar nome e sair da conta  
+- 📱 **Design responsivo**, simulando layout mobile  
+- 📌 **TabBar fixa** com navegação principal  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Tecnologias Utilizadas
+- ⚛️ **React + TypeScript**  
+- 🌐 **React Router DOM**  
+- 📊 **Recharts**  
+- 🎨 **CSS puro (modularizado)**  
+- 🔣 **Lucide-react (ícones)**  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Estrutura do Projeto
+```
+src/
+├─ assets/          # imagens e gráficos
+├─ components/
+│  └─ TabBar.tsx
+├─ pages/
+│  ├─ Home.tsx
+│  ├─ Plants.tsx
+│  ├─ Detalhes.tsx
+│  ├─ Ia.tsx
+│  ├─ User.tsx
+│  └─ Login.tsx
+├─ styles/
+│  ├─ Home.css
+│  ├─ Plants.css
+│  └─ Ia.css
+├─ App.tsx
+└─ main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Instalação e Execução
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🔹 1. Clonar o repositório
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd fluvia
 ```
+
+### 🔹 2. Instalar dependências
+```bash
+npm install
+# ou
+yarn
+```
+
+### 🔹 3. Executar o projeto
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+Abra o navegador e acesse **http://localhost:5173**
+
+---
+
+## 🌿 Como Adicionar Novas Plantas
+
+1. Coloque as imagens em `src/assets/`  
+2. Importe-as no arquivo `Plants.tsx`  
+3. Adicione um novo objeto no array `plantas`:
+
+```ts
+{
+  id: 4,
+  nome: "Nova Planta",
+  imagem: novaPlanta,
+  imagemInfo: novaPlantaInfo,
+  ajusteText: "Ajuste automático em +15% de água",
+  grafico: novaPlantaGraf,
+  especie: "Nome científico",
+  localizacao: "Lote Y",
+  umidadeSolo: "42%",
+  necessidade: "Moderada",
+  irrigacao: "10:00 12/11"
+}
+```
+
+---
+
+## 📱 Modo Mobile
+O layout foi otimizado para **modo mobile responsivo** e testado pelo **DevTools (F12)**.

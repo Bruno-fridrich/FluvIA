@@ -3,13 +3,9 @@
   bottom: 0;
   left: 0;
   width: 60%;
-  background-color: #02618D;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   height: 7%;
-  justify-self: anchor-center;
-  margin-left: -145px;
 }
 
 .tab-button {
@@ -17,7 +13,6 @@
   border: none;
   color: white;
   opacity: 0.7;
-  transition: opacity 0.2s;
 }
 
 .tab-button.active,

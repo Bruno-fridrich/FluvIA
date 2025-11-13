@@ -7,7 +7,7 @@
 }
 
 .User-container {
-    margin-top: -60px;
+    min-height: 90vh;
 }
 
 .usuario-foto {
@@ -85,22 +85,22 @@
 }
 
 .edit-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 10px;
-  margin-bottom: 70px;
-  margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 30px;
 }
 
 .edit-input {
-  background: transparent;
-  border: 1px solid #ffffff3f;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 30px;
-  width: 170px;
+    background: transparent;
+    border: 1px solid #ffffff3f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 30px;
+    width: 170px;
 }

@@ -76,7 +76,7 @@ export default function User() {
                 <div className='card-container'>
                     <div className='card-status'>
                         <p className='status-name'>Número de plantas</p>
-                        <p className='num plantas'>7</p>
+                        <p className='num plantas'>3</p>
                     </div>
                     <div className='card-status'>
                         <p className='status-name'>Consumo total</p>

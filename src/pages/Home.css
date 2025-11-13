@@ -44,13 +44,43 @@
 .economia {
   font-size: 70%;
   margin: 0;
-  margin-left: 3%
+  margin-left: 3%;
 }
 
-#carrossel{
-  background-color: #337796;
-  height: 80px;
+#carrossel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 8px;
+  padding: 5px;
   width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  justify-content: flex-start;
+}
+
+#carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+#carrossel > div {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.plantHome {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .plantHome {
+    width: 100px;
+    height: 75px;
+  }
 }
 
 .chart-container {
@@ -65,7 +95,7 @@
   font-family: var(--Mohave);
 }
 
-#aviso{
+#aviso {
   font-family: var(--Mohave);
   color: black;
   background-color: white;

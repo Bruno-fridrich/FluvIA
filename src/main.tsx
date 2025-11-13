@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Plantas from './pages/Plants';
 import Ia from './pages/Ia';
 import User from './pages/User';
+import Detalhes from './pages/Detalhes'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/plantas" element={<Plantas />} />
         <Route path="/ia" element={<Ia />} />
         <Route path="/user" element={<User />} />
+        <Route path="/plantas/:id" element={<Detalhes />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

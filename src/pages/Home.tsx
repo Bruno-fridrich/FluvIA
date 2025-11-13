@@ -2,6 +2,8 @@ import './Home.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import imgPlant from '../assets/plant.png';
 import TabBar from '../components/TabBar';
+import { plantas } from './Plants';
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
     const data = [
@@ -15,6 +17,13 @@ export default function Home() {
         { hora: '14h', mm: 5.8 },
         { hora: '15h', mm: 6.0 },
     ];
+
+    const navigate = useNavigate();
+
+    function handleClick(id: number) {
+        navigate(`/plantas/${id}`);
+    }
+
     return (
         <div className="home-container">
             <div id="home-img">
@@ -25,7 +34,11 @@ export default function Home() {
                 </div>
             </div>
             <div id="carrossel">
-
+                {plantas.map((planta) => (
+                    <div key={planta.id}>
+                        <img src={planta.imagemInfo} alt={planta.nome} className='plantHome' onClick={() => handleClick(planta.id)}/>
+                    </div>
+                ))}
             </div>
             <div className="chart-container">
                 <ResponsiveContainer width="100%" height={200}>
