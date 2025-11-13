@@ -4,13 +4,17 @@ import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-    const [email, setEmail] = useState<string>('');
+    const [usuario, setEmail] = useState<string>('');
     const [senha, setSenha] = useState<string>('');
     const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log ("Login: ", {email, senha})
+
+        const dadosUsuario = { usuario, senha };
+        localStorage.setItem('usuario', JSON.stringify(dadosUsuario));
+
+        console.log("Login:", dadosUsuario);
         navigate('/home');
     };
 
@@ -26,9 +30,9 @@ export default function Login() {
 
                 <form onSubmit={handleSubmit}>
                     <input
-                        type="email"
-                        placeholder="E-mail"
-                        value={email}
+                        type="text"
+                        placeholder="Usuário"
+                        value={usuario}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
@@ -43,7 +47,6 @@ export default function Login() {
                         <a href="#">Esqueci minha senha</a>
                         <a href="#">Não possuo cadastro</a>
                     </div>
-
                     <button type="submit">Entrar</button>
                 </form>
             </div>

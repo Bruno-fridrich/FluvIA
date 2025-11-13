@@ -2,19 +2,29 @@ import { Search } from "lucide-react";
 import TabBar from '../components/TabBar';
 import milho from '../assets/milho.jpeg';
 import cana from '../assets/cana.jpg';
+import milhoInfo from '../assets/milhoInfo.jpg';
+import canaInfo from '../assets/canaInfo.jpg';
+import milhoGraf from '../assets/graficoMilho.png';
+import canaGraf from '../assets/graficoCana.png';
 import './Plants.css';
 import { useState } from "react";
 
-const plantas = [
+export const plantas = [
   {
     id: 1,
     nome: "Milho",
     imagem: milho,
+    imagemInfo: milhoInfo,
+    ajusteText: "Últimos dias foram secos, ajuste automático em +10% de água",
+    grafico: milhoGraf,
   },
   {
     id: 2,
     nome: "Cana-de-açúcar",
     imagem: cana,
+    imagemInfo: canaInfo,
+    ajusteText: "Últimos dias foram secos, ajuste automático em +20% de água",
+    grafico: canaGraf,
   },
 ];
 

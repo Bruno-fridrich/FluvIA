@@ -4,7 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import Login from './pages/Login'
 import Home from './pages/Home'
-import Plantas from "./pages/Plants";
+import Plantas from './pages/Plants';
+import Ia from './pages/Ia';
+import User from './pages/User';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +15,8 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/plantas" element={<Plantas />} />
+        <Route path="/ia" element={<Ia />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
